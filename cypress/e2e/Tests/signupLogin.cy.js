@@ -1,8 +1,20 @@
+import { faker } from '@faker-js/faker';
+import signupLogin from '../PageObject/signupLogin.js'
 
+const randomName = faker.person.fullName(); // Rowan Nikolaus
+const randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
 
 describe('Login and Sign up test cases', function(){
 
-    it('Register user', function(){
+    before(()=>{
+        cy.visit('https://automationexercise.com/')
+        //cy.visit('/')
+        cy.title('eq', 'Automation Exercise')
+    })
+
+    it.only('Register user', function(){
+        signupLogin.registerUser()
+
 
     } )
 
