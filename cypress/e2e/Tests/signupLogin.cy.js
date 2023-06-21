@@ -13,7 +13,7 @@ describe('Login and Sign up test cases', function(){
     })
 
     it.only('Register user', function(){
-        signupLogin.registerUser()
+        signupLogin.newUser()
 
 
     } )
